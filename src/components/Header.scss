@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+
+.header{
+  &__img{
+    top: -70px;
+    z-index: -1;
+  }
+  &__title{
+    position: absolute;
+    top: 20%;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-style: oblique;
+    line-height:130px;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+
+  }
+}

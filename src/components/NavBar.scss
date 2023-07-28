@@ -1,0 +1,9 @@
+
+.nav{
+  z-index: 1;
+  &__logo{
+    width: 200px;
+    height: 70px;
+    object-fit:cover;
+  }
+}
