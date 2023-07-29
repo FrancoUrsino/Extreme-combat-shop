@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
-
+$orbi: 'Orbitron', sans-serif;
 
 .header{
   &__img{
@@ -9,12 +9,26 @@
   &__title{
     position: absolute;
     top: 20%;
-    font-family: 'Orbitron', sans-serif;
+    font-family: $orbi;
     font-weight: 900;
     font-style: oblique;
     line-height:130px;
     text-transform: uppercase;
     letter-spacing: -5px;
-
+  }
+  &__btn{
+    bottom: 60px;
+    right: 50%;
+    color: rgb(240, 240, 240);
+    font-family: $orbi;
+    font-weight: 700;
+    &::before{
+      content: '';
+      position: relative;
+      border-left: 1px solid rgb(240, 240, 240);
+      left: 55%;
+      bottom: -45px;
+      padding: 20px 0;
+    }
   }
 }

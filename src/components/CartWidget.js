@@ -6,9 +6,10 @@ function CartWidget() {
   return (
     <div className='flex p-5'>
       <a href="">
-        <FontAwesomeIcon icon={faCartShopping} />
+        <i className='material-icons'>local_mall</i>
+        <span className='text-sm'>0</span>
       </a>
-      <p>0</p>
+      
     </div>
   )
 }
