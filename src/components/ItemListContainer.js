@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getProducts } from './stock'
+import ItemList from './ItemList.js'
+import '../components/Item.scss'
+
 
 const ItemListContainer = ({greeting})=>{
-  console.log(greeting)
+  const [product, setProduct] = useState([])
+
+  useEffect(() =>{getProducts()
+    .then(response =>{ setProduct(response)
+    })
+    .catch(error =>{
+      console.error(error)
+    })
+  }, [])
   return(
-    <h1 className='text-6xl flex justify-center my-10'>{greeting}</h1>
+    <div className='items'>
+      <h1>{greeting}</h1>
+      <div>
+      <ItemList product={product}/>
+      </div>
+    </div>
   )
 }
 

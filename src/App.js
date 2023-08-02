@@ -1,15 +1,18 @@
 import './App.scss';
-import ContactUS from './components/ContactUS';
-import Header from './components/Header';
-import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Products from './components/products/Products';
 
 
 function App() {
   return (
     <>
-      <Header />
-      <ContactUS />
-      <ItemListContainer greeting="Bienvenido" />
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/products' element={<Products/>}/>
+      </Routes>
     </>
 
   );
