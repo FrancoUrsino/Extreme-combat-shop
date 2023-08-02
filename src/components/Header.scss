@@ -15,6 +15,7 @@ $orbi: 'Orbitron', sans-serif;
     line-height:130px;
     text-transform: uppercase;
     letter-spacing: -5px;
+    font-size: 8rem;
   }
   &__btn{
     margin: 0;
@@ -30,6 +31,26 @@ $orbi: 'Orbitron', sans-serif;
       left: 55%;
       bottom: -45px;
       padding: 20px 0;
+    }
+  }
+}
+
+@media (max-width: 800px){
+  .header{
+    position: relative;
+    top: -100px;
+    &__title{
+      font-size: 4rem;
+      line-height: normal;
+    }
+    &__btn{
+      position: absolute;
+      left: 37%;
+      bottom: 130px;
+      &::before{
+        content: '';
+        left: 80%;
+      }
     }
   }
 }
