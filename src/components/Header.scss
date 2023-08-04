@@ -39,6 +39,7 @@ $orbi: 'Orbitron', sans-serif;
   .header{
     position: relative;
     top: -100px;
+    overflow-x: hidden;
     &__title{
       font-size: 4rem;
       line-height: normal;

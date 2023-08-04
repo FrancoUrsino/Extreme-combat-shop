@@ -15,15 +15,16 @@
     font-family: 'Orbitron', sans-serif;
     font-size: 3rem;
     font-weight: 700;
+    overflow-x: hidden;
   }
   &__form{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, auto));
 
     &--container{
-      width: 400px;
+      width: 100%;
       display: grid;
-      grid-template-columns: 700px;
+      // grid-template-columns: 300px;
     }
     &--label{
       font-family: 'Orbitron', sans-serif;
@@ -39,6 +40,8 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    left: 20%;
     &--title{
       font-family: 'Orbitron', sans-serif;
       font-size: 1rem;
@@ -49,6 +52,7 @@
     }
     &--link{
       padding-bottom: 10px;
+      width: 100%;
     }
   }
 }
@@ -56,5 +60,11 @@
 @media (max-width: 800px){
   .contact__title{
     font-size: 2rem;
+    top: -60px;
+  }
+  .contact__form--container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
   }
 }
