@@ -34,7 +34,7 @@
 
 @media (max-width:500px){
   .nav{
-    flex-direction: column;
+    // flex-direction: column;
 
     &__menu{
       display: flex;
@@ -46,13 +46,28 @@
       padding-top: 5px;
       margin-bottom: .25rem;
     }
-    &__list.open{
-      display: flex;
+    &__list.active{
+      backdrop-filter: blur(8px);
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 72px;
+      left: 0;
+      padding-bottom: 20p;
     }
     &__links{
+      display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: center;
       text-align: center;
+    }
+    &__cart{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      right: 40px;
+      margin: 2px;
     }
   }
 }
