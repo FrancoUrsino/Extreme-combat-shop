@@ -13,13 +13,12 @@ function ItemCount({stock, initial, onAdd}) {
     console.log(quan)
   }
   return (
-    <div>
-      <p></p>
+    <>
       <button className='hover:text-sky-600 p-5 restar' onClick={restar}>-</button>
       <button className='mx-2' onClick={()=> {onAdd(quan);}}>Agregar al carrito</button>
       <span className='px-2 border-2 border-black'>{quan}</span>
       <button className='hover:text-sky-600 p-5 sumar' onClick={sumar}>+</button>
-    </div>
+    </>
   )
 }
 

@@ -4,22 +4,21 @@ import ItemList from './ItemList.js'
 import '../components/Item.scss'
 
 
-const ItemListContainer = ({greeting})=>{
+const ItemListContainer = () => {
   const [product, setProduct] = useState([])
 
-  useEffect(() =>{getProducts()
-    .then(response =>{ setProduct(response)
+  useEffect(() => {
+    getProducts()
+    .then(response => {
+      setProduct(response)
     })
-    .catch(error =>{
+    .catch(error => {
       console.error(error)
     })
   }, [])
-  return(
+  return (
     <div className='items'>
-      <h1>{greeting}</h1>
-      <div>
-      <ItemList product={product}/>
-      </div>
+      <ItemList product={product} />
     </div>
   )
 }

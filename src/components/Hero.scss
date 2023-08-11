@@ -1,30 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
 $orbi: 'Orbitron', sans-serif;
 
-.header{
-  &__img{
+.hero {
+  &__img {
     top: -70px;
     z-index: -1;
   }
-  &__title{
+
+  &__title {
     position: absolute;
     top: 20%;
     font-family: $orbi;
     font-weight: 900;
     font-style: oblique;
-    line-height:130px;
+    line-height: 130px;
     text-transform: uppercase;
     letter-spacing: -5px;
     font-size: 8rem;
   }
-  &__btn{
+
+  &__btn {
     margin: 0;
     bottom: 60px;
     right: 47%;
     color: rgb(240, 240, 240);
     font-family: $orbi;
     font-weight: 700;
-    &::before{
+
+    &::before {
       content: '';
       position: relative;
       border-left: 1px solid rgb(240, 240, 240);
@@ -35,20 +38,23 @@ $orbi: 'Orbitron', sans-serif;
   }
 }
 
-@media (max-width: 800px){
-  .header{
+@media (max-width: 800px) {
+  .hero {
     position: relative;
     top: -100px;
     overflow-x: hidden;
-    &__title{
+
+    &__title {
       font-size: 4rem;
       line-height: normal;
     }
-    &__btn{
+
+    &__btn {
       position: absolute;
       left: 37%;
       bottom: 130px;
-      &::before{
+
+      &::before {
         content: '';
         left: 80%;
       }

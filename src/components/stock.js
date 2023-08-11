@@ -1,7 +1,4 @@
-
-
-
-const products =[
+const products = [
   {
     id: 1,
     name: 'guantes boxeo proyect',
@@ -426,56 +423,101 @@ const products =[
     category: 'pack',
   },
   {
-    id: 42,
-    name: 'gauntes de boxeo venum',
-    price: 97999,
-    img: 'https://i.postimg.cc/FFy39B70/venum4.png',
+    id: 47,
+    name: 'tibiales dragons',
+    price: 27399,
+    img: 'https://i.postimg.cc/7YwqTNM8/tibiales1.png',
     stock: 10,
     desc: 'descript',
-    category: 'guantes',
+    category: 'tibiales',
   },
   {
-    id: 42,
-    name: 'gauntes de boxeo venum',
-    price: 97999,
-    img: 'https://i.postimg.cc/FFy39B70/venum4.png',
+    id: 48,
+    name: 'tibiales proyect',
+    price: 34499,
+    img: 'https://i.postimg.cc/MK68Gpqz/tibiales10.png',
     stock: 10,
     desc: 'descript',
-    category: 'guantes',
+    category: 'tibiales',
   },
   {
-    id: 42,
-    name: 'gauntes de boxeo venum',
-    price: 97999,
-    img: 'https://i.postimg.cc/FFy39B70/venum4.png',
+    id: 49,
+    name: 'tibiales sonnos',
+    price: 15999,
+    img: 'https://i.postimg.cc/Hs6181kX/tibiales11.png',
     stock: 10,
     desc: 'descript',
-    category: 'guantes',
+    category: 'tibiales',
   },
   {
-    id: 42,
-    name: 'gauntes de boxeo venum',
-    price: 97999,
-    img: 'https://i.postimg.cc/FFy39B70/venum4.png',
+    id: 50,
+    name: 'tibiales proyect',
+    price: 34499,
+    img: 'https://i.postimg.cc/437GT2Zt/tibiales2.png',
     stock: 10,
     desc: 'descript',
-    category: 'guantes',
+    category: 'tibiales',
   },
   {
-    id: 42,
-    name: 'gauntes de boxeo venum',
-    price: 97999,
-    img: 'https://i.postimg.cc/FFy39B70/venum4.png',
+    id: 51,
+    name: 'tibiales',
+    price: 7999,
+    img: 'https://i.postimg.cc/q7PTBcMF/tibiales3.png',
     stock: 10,
     desc: 'descript',
-    category: 'guantes',
+    category: 'tibiales',
+  },
+  {
+    id: 52,
+    name: 'tibiales dragons',
+    price: 27399,
+    img: 'https://i.postimg.cc/t4mbwG0p/tibiales4.png',
+    stock: 10,
+    desc: 'descript',
+    category: 'tibiales',
+  },
+  {
+    id: 53,
+    name: 'tibiales trivo',
+    price: 15399,
+    img: 'https://i.postimg.cc/5Ngb5FnH/tibiales5.png',
+    stock: 10,
+    desc: 'descript',
+    category: 'tibiales',
+  },
+  {
+    id: 54,
+    name: 'tibiales buddha',
+    price: 29499,
+    img: 'https://i.postimg.cc/htGg2P52/tibiales6.png',
+    stock: 10,
+    desc: 'descript',
+    category: 'tibiales',
+  },
+  {
+    id: 55,
+    name: 'tibiales venum',
+    price: 57399,
+    img: 'https://i.postimg.cc/KjFhBZTr/tibiales8.png',
+    stock: 10,
+    desc: 'descript',
+    category: 'tibiales',
+  },
+  {
+    id: 56,
+    name: 'tibiales venum',
+    price: 57399,
+    img: 'https://i.postimg.cc/8kBSD68y/tibiales9.png',
+    stock: 10,
+    desc: 'descript',
+    category: 'tibiales',
   },
 ]
 
 export const getProducts = () => {
-  return new Promise((resolve)=>{
-    setTimeout(()=>{
+  return new Promise((resolve) => {
+    setTimeout(() => {
       resolve(products)
-    },800)
+    }, 800)
   })
 }

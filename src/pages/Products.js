@@ -1,10 +1,10 @@
 import React from 'react'
-import ItemListContainer from '../ItemListContainer'
+import ItemListContainer from '../components/ItemListContainer'
 
 function Products() {
   return (
     <>
-    <ItemListContainer/>
+      <ItemListContainer />
     </>
   )
 }
