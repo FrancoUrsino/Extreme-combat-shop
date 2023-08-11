@@ -6,14 +6,12 @@ $nanu: 'Nanum Myeongjo', serif;
 
 .items {
   width: 100%;
-}
-
-.items__container {
-  width: 100%;
-  background-color: rgb(86, 155, 155);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-  gap: 2rem;
+  &__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+  }
 }
 
 .card {
