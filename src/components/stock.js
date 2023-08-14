@@ -360,7 +360,7 @@ const products = [
     category: 'vendas',
   },
   {
-    id: 40,
+    id: 57,
     name: 'guantes de boxeo Venum',
     price: 79999,
     img: 'https://i.postimg.cc/Nj5KrJfJ/venum5.png',

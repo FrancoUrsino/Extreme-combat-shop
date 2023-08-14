@@ -13,7 +13,7 @@ function NavBar() {
     <nav className='nav flex sticky top-0 backdrop-blur-md justify-between align-middle w-full bg-black/30 shadow-lg shadow-black/20 text-white text-xl'>
       <Link to="/"><img src={logo} alt='' className='nav__logo' /></Link>
       <button onClick={toogleMenu} className={`nav__menu `}><i className='material-icons'>menu</i></button>
-      <ul className={`nav__list cursor-pointer p-5 m-0 ${openMenu ? 'active shadow-lg shadow-black/50 backdrop-blur-md' : ''}`}>
+      <ul className={`nav__list cursor-pointer p-5 m-0 ${openMenu ? 'active shadow-lg shadow-black/50' : ''}`}>
         <li>
           <Link to="/" className='nav__links'>Inicio</Link>
         </li>
