@@ -2,6 +2,7 @@ import NavBar from './components/NavBar/NavBar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Products from './pages/Products';
+import ItemDetailContainer from './components/ItemDetailContainer.js';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/item/:id' element={<ItemDetailContainer/>} />
       </Routes>
     </>
 
