@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import CartWidget from '../CartWidget'
 import logo from '../images/logo.png'
-import { Link,NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './NavBar.scss'
 
 function NavBar() {
@@ -21,10 +21,9 @@ function NavBar() {
           <NavLink to="/products" className='nav__links'>Productos</NavLink>
         </li>
         <li>
-          <NavLink to="/" className='nav__links'>Contactanos</NavLink>
+          <CartWidget />
         </li>
       </ul>
-      <CartWidget />
     </nav>
   )
 }

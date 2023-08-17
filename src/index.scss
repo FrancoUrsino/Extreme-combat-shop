@@ -1,5 +1,8 @@
 * {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @tailwind base;
@@ -13,3 +16,238 @@
 $orbi: 'Orbitron', sans-serif;
 $nanu: 'Nanum Myeongjo', serif;
 
+
+// ============ //
+// HERO SECTION //
+// ============ //
+
+.hero {
+  &__img {
+    top: -70px;
+    z-index: -1;
+  }
+
+  &__title {
+    position: absolute;
+    top: 20%;
+    font-family: $orbi;
+    font-weight: 900;
+    font-style: oblique;
+    line-height: 130px;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    font-size: 8rem;
+  }
+
+  &__btn {
+    margin: 0;
+    bottom: 60px;
+    right: 47%;
+    color: rgb(240, 240, 240);
+    font-family: $orbi;
+    font-weight: 700;
+
+    &::before {
+      content: '';
+      position: relative;
+      border-left: 1px solid rgb(240, 240, 240);
+      left: 55%;
+      bottom: -45px;
+      padding: 20px 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    position: relative;
+    top: -100px;
+    overflow-x: hidden;
+
+    &__title {
+      font-size: 4rem;
+      line-height: normal;
+    }
+
+    &__btn {
+      position: absolute;
+      left: 37%;
+      bottom: 130px;
+
+      &::before {
+        content: '';
+        left: 80%;
+      }
+    }
+  }
+}
+
+// ============ //
+// MAIN SECTION //
+// ============ //
+
+
+.contact {
+  width: 100%;
+  padding: 0 30px;
+
+  &__container {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  }
+
+  &__title {
+    position: relative;
+    top: -30px;
+    font-family: $orbi;
+    font-size: 3rem;
+    font-weight: 700;
+    overflow-x: hidden;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+    gap: 2rem;
+
+    &--container {
+      width: 100%;
+      display: grid;
+    }
+
+    &--label {
+      font-family: $orbi;
+      font-size: .8rem;
+      padding: 30px 0 0;
+    }
+
+    &--input {
+      width: 100%;
+      border: 1px solid rgb(140, 140, 140);
+    }
+  }
+
+  &__data {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20%;
+
+    &--title {
+      font-family: $orbi;
+      font-size: 1rem;
+      padding-bottom: 5px;
+    }
+
+    &--text {
+      color: rgb(140, 140, 140);
+      padding-bottom: 10px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contact__title {
+    font-size: 2rem;
+    top: -60px;
+  }
+
+  .contact__form--container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .contact__data {
+    left: 0;
+  }
+}
+
+// ============== //
+// FOOTER SECTION //
+// ============== //
+
+.footer {
+  width: 100%;
+  margin: 30px 0 0 0;
+  bottom: 0px;
+  background-color: rgb(197, 197, 197);
+
+
+  &__container {
+    border-top: 1.5px solid rgb(239, 239, 239);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(150px, auto));
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__list {
+    list-style: none;
+    color: #606060;
+
+    .footer__text2 {
+      display: none;
+
+      &--link {
+        text-decoration: none;
+        color: rgb(107, 107, 107);
+
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icons a {
+    text-decoration: none;
+  }
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer {
+    width: 100%;
+    margin: 30px 0 0 0;
+
+    &__container {
+      border-top: 1.5px solid rgb(240, 240, 240);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-evenly;
+      justify-items: center;
+      align-items: center;
+      margin: 0 15px;
+    }
+
+    &__list {
+      list-style: none;
+      color: rgb(97, 97, 97);
+
+      .footer__text2 {
+        display: block;
+      }
+    }
+  }
+}
