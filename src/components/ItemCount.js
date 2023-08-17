@@ -16,12 +16,12 @@ function ItemCount({stock, initial, onAdd}) {
 
 
   return (
-    <div>
+    <div className='my-4'>
       <Toaster expand="true" closeButton/>
-      <button className='hover:text-sky-600 p-5 restar' onClick={restar}>-</button>
-      <button className='mx-2'onClick={() => {onAdd={onAdd}; toast.success('My first toast')}} >Agregar al carrito</button>
-      <span className='px-2 border-2 border-black'>{quan}</span>
-      <button className='hover:text-sky-600 p-5 sumar' onClick={sumar}>+</button>
+      <button className='hover:rounded-xl hover:border-2 hover:border-black border-2 border-transparent hover:text-sky-600 p-1 px-3 restar' onClick={restar}>-</button>
+      <button className='mx-2 hover:uppercase hover:text-gray-800hover:rounded-3xl ' onClick={() => {onAdd={onAdd}; toast.success('My first toast')}} >Agregar al carrito</button>
+      <span className='px-1'>{quan}</span>
+      <button className='hover:rounded-xl hover:border-2 hover:border-black border-2 border-transparent hover:text-sky-600 p-1 px-3 sumar' onClick={sumar}>+</button>
     </div>
   )
 }
