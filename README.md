@@ -1,5 +1,5 @@
 <h1>PROYECTO FINAL PARA EL CURSO DE REACTJS</h1>
-<p>Coderhouse (comisión 47140)</p>
+(https://extremecombatshop.vercel.app/)
 
 # NAVEGACIÓN DE PÁGINA Extreme Combat Shop
 
