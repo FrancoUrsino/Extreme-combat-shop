@@ -1,5 +1,5 @@
 <h1>PROYECTO FINAL PARA EL CURSO DE REACTJS</h1>
-(https://extremecombatshop.vercel.app/)
+https://extremecombatshop.vercel.app/
 
 # NAVEGACIÓN DE PÁGINA Extreme Combat Shop
 
