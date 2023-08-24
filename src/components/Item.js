@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Item({id, name, price, img}) {
   return (
-    <article className='card'>
+    <article key={id} className='card'>
       <div className='card__container'>
         <div className='card__container--img'>
           <img src={img} alt={name} className='card__img' />

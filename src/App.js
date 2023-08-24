@@ -9,13 +9,13 @@ import ItemListContainer from './components/ItemListContainer';
 function App() {
   return (
     <>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/item/:id' element={<ItemDetailContainer/>} />
-        <Route path='/products/:category' element={<ItemListContainer/>} />
-      </Routes>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
+          <Route path='/products/:category' element={<ItemListContainer />} />
+        </Routes>
     </>
 
   );

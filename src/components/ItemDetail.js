@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import ItemCount from './ItemCount'
 import './Item.scss'
 import { Link } from 'react-router-dom'
+import { CartContext } from './CartContext'
 
-function ItemDetail({ img, name, desc, id, price, category, stock }) {
+function ItemDetail({id, img, name, desc, price, category, stock }) {
+  const [quanAdd, setQuanAdd] = useState(0)
+  const {addProd} = useContext(CartContext)
+  const onAdd = (q) =>{
+    setQuanAdd(q)
+    const prod = {id, name, price}
+    
+    addProd(prod, quanAdd)
+  }
+
   return (
     <article className="cardItem">
       <div className="cardItem__container">
@@ -13,8 +23,14 @@ function ItemDetail({ img, name, desc, id, price, category, stock }) {
           <p className="cardItem__container--container--category">categorías: {category}</p>
           <p className="cardItem__container--container--description">{desc}</p>
           <p className="cardItem__container--container--price">${price}</p>
-          <ItemCount initial={1} stock={stock} onAdd={''} />
-          <Link to="/products" className='cardItem__container--container--btn bg-gray-800 text-white'>regresar <i class="material-symbols-outlined">reply</i></Link>
+          {
+            quanAdd > 0 ? (
+              <Link to='/cart' className='Option'>Finalizar compra</Link>
+              ) : (
+              <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+              )
+          }
+          <Link to='/products' className='cardItem__container--container--btn bg-gray-800 text-white'>regresar <i className="material-symbols-outlined">reply</i></Link>
         </div>
       </div>
     </article>
