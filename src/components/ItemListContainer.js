@@ -1,28 +1,45 @@
 import React, { useEffect, useState } from 'react'
-import { getProducts } from './asyncMock'
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import ItemList from './ItemList.js'
 import '../components/Item.scss'
 import { Link, useParams } from 'react-router-dom'
-
+import {db} from '../Firebase'
 
 
 const ItemListContainer = () => {
   const [product, setProduct] = useState([])
   console.log(product);
-
   const category = useParams().category
   console.log(category)
 
+
   useEffect(() => {
-    getProducts()
-      .then(response => {
-        if (category) {
-          setProduct(response.filter((prod) => prod.category === category))
-        } else {
-          setProduct(response)
-        }
-      })
-  }, [category])
+
+    const prodCollection = collection(db, 'products');
+    if (category) {
+      const queryFilter = query(
+        prodCollection,
+        where("category", "==", category)
+      );
+      getDocs(queryFilter).then((res) =>
+        setProduct(
+          res.docs.map((prod) => ({
+            id: prod.id,
+            ...prod.data(),
+          }))
+        )
+      );
+    } else {
+      getDocs(prodCollection).then((res) =>
+        setProduct(
+          res.docs.map((prod) => ({
+            id: prod.id,
+            ...prod.data(),
+          }))
+        )
+      );
+    }
+  }, [category]);
   return (
     <div>
       <ul className='flex text-center justify-center my-2 uppercase'>

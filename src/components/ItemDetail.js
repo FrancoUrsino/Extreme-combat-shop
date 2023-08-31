@@ -4,14 +4,14 @@ import './Item.scss'
 import { Link } from 'react-router-dom'
 import { CartContext } from './CartContext'
 
-function ItemDetail({id, img, name, desc, price, category, stock }) {
+function ItemDetail({ id, img, name, desc, price, category, stock }) {
   const [quanAdd, setQuanAdd] = useState(0)
-  const {addProd} = useContext(CartContext)
-  const onAdd = (q) =>{
+  const { addProd } = useContext(CartContext)
+  const onAdd = (q) => {
     setQuanAdd(q)
-    const prod = {id, name, price}
-    
-    addProd(prod, quanAdd)
+    const prod = { id, name, price }
+
+    addProd(prod, q)
   }
 
   return (
@@ -25,10 +25,10 @@ function ItemDetail({id, img, name, desc, price, category, stock }) {
           <p className="cardItem__container--container--price">${price}</p>
           {
             quanAdd > 0 ? (
-              <Link to='/cart' className='Option'>Finalizar compra</Link>
-              ) : (
+              <Link to='/cart'>Finalizar compra</Link>
+            ) : (
               <ItemCount initial={1} stock={stock} onAdd={onAdd} />
-              )
+            )
           }
           <Link to='/products' className='cardItem__container--container--btn bg-gray-800 text-white'>regresar <i className="material-symbols-outlined">reply</i></Link>
         </div>

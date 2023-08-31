@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import ItemDetailContainer from './components/ItemDetailContainer.js';
 import ItemListContainer from './components/ItemListContainer';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/products/:category' element={<ItemListContainer />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
     </>
 
