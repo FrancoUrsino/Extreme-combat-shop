@@ -1,33 +1,3 @@
-// import React, { useContext } from 'react'
-// import { CartContext } from './CartContext'
-// import { Link } from 'react-router-dom'
-// import CartItem from './CartItem'
-
-
-// function Cart() {
-//   const {cart, cleanCart, totalProducts, total} =useContext(CartContext)
-
-//   if(totalProducts === 0 ){
-//     return(
-//       <>
-//         <h2>No seleccionaste ningún producto</h2>
-//         <Link to='/products'>ver productos</Link>
-//       </>
-//     )
-//   }
-//   return (
-//   <>
-//     {cart.map(prod => <CartItem key={prod.id} {...prod} />)}
-//     <p>Total: {total}</p>
-//     <p>Prooductos totales: {totalProducts}</p>
-//     <button className='m-5' onClick={()=> cleanCart()}>Eliminar productos del carrito</button>
-//     <Link to='/'>Terminar compra</Link>
-//   </>
-//   )
-// }
-
-// export default Cart
-
 import { CartContext } from './CartContext'
 import { useContext } from "react";
 import { Link } from "react-router-dom";
