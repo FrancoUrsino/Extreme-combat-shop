@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom'
 import { CartContext } from './CartContext'
 
 function CartWidget() {
-  const {totalQuan} = useContext(CartContext)
+  const {totalProducts} = useContext(CartContext)
   return (
     <div className='flex px-4 nav__cart justify-center'>
       <NavLink to="/cart">
         <i className='material-icons'>local_mall</i>
-        {totalQuan}
+        {totalProducts}
       </NavLink>
     </div>
   )

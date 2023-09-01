@@ -4,12 +4,12 @@ import './Item.scss'
 import { Link } from 'react-router-dom'
 import { CartContext } from './CartContext'
 
-function ItemDetail({ id, img, name, desc, price, category, stock }) {
+function ItemDetail({ id, image, title, description, price, category, stock }) {
   const [quanAdd, setQuanAdd] = useState(0)
   const { addProd } = useContext(CartContext)
   const onAdd = (q) => {
     setQuanAdd(q)
-    const prod = { id, name, price }
+    const prod = { id, title, price }
 
     addProd(prod, q)
   }
@@ -17,11 +17,11 @@ function ItemDetail({ id, img, name, desc, price, category, stock }) {
   return (
     <article className="cardItem">
       <div className="cardItem__container">
-        <img src={img} alt={name} className="cardItem__container--img" />
+        <img src={image} alt={title} className="cardItem__container--img" />
         <div className="cardItem__container--container">
-          <p className="cardItem__container--container--title">{name}</p>
+          <p className="cardItem__container--container--title">{title}</p>
           <p className="cardItem__container--container--category">categorías: {category}</p>
-          <p className="cardItem__container--container--description">{desc}</p>
+          <p className="cardItem__container--container--descriptionription">{description}</p>
           <p className="cardItem__container--container--price">${price}</p>
           {
             quanAdd > 0 ? (

@@ -14,7 +14,6 @@ const ItemListContainer = () => {
 
 
   useEffect(() => {
-
     const prodCollection = collection(db, 'products');
     if (category) {
       const queryFilter = query(
