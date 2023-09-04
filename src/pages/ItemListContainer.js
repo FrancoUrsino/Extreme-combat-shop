@@ -12,39 +12,47 @@ const ItemListContainer = () => {
   const [product, setProduct] = useState([])
   console.log(product);
   const category = useParams().category
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
 
 
   useEffect(() => {
-    const prodCollection = collection(db, 'products');
+    const prodCollection = collection(db, "products");
 
     if (category) {
-      const queryFilter = query(prodCollection, where("category", "==", category));
-      getDocs(queryFilter)
-      .then((res) => setProduct(
-          res.docs.map((prod) => ({
-            id: prod.id,
-            ...prod.data(),
-          }))
-        )
-      .catch((error)=> console.error(error))
-      .finally(()=> setIsLoading(false))
-      );
+        const queryFilter = query(
+            prodCollection,
+            where("category", "==", category)
+        );
+        getDocs(queryFilter)
+            .then((res) =>
+                setProduct(
+                    res.docs.map((prod) => ({
+                        id: prod.id,
+                        ...prod.data(),
+                    }))
+                )
+            )
+            .catch((error) => console.error(error)) // Aplicar .catch() aquí
+            .finally(() => setIsLoading(false));
     } else {
-      getDocs(prodCollection).then((res) =>
-        setProduct(
-          res.docs.map((prod) => ({
-            id: prod.id,
-            ...prod.data(),
-          }))
-        )
-      .catch((err)=> console.error(err))
-      .finally(()=> setIsLoading(false))
-      );
+        getDocs(prodCollection)
+            .then((res) =>
+                setProduct(
+                    res.docs.map((prod) => ({
+                        id: prod.id,
+                        ...prod.data(),
+                    }))
+                )
+            )
+            .catch((err) => console.error(err)) // Aplicar .catch() aquí
+            .finally(() => setIsLoading(false));
     }
-  }, [category]);
+}, [category]);
+
   return (
+    <>
+    {isLoading ? (<Loader/>): (
     <div>
           <img src={productsHero} alt="hero" className='items__img' />
           <ul className='flex text-center justify-center my-2 p-5 uppercase'>
@@ -56,9 +64,10 @@ const ItemListContainer = () => {
             <li><NavLink to="/products/pack" className='px-5 mx-5 items__categories'>kits</NavLink></li>
           </ul>
           <section className='items'>
-            {isLoading ? (<Loader/>): (<ItemList product={product} />)}
+            <ItemList product={product} />
           </section>
-        </div>
+        </div>)}
+  </>
   )
 }
 

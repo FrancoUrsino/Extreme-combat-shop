@@ -61,7 +61,7 @@ const CartItem = ({ product, quantity }) => {
                   <span className="confirm-delete cursor-pointer" onClick={handleConfirmDelete}> Confirm </span>
                 </div>
               ) : (
-                <span class="material-symbols-outlined">delete</span>
+                <span className="material-symbols-outlined">delete</span>
               )}
             </span>
           </div>
