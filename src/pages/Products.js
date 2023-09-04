@@ -1,12 +1,10 @@
 import React from 'react'
-import ItemListContainer from '../components/ItemListContainer'
-import Footer from '../components/Footer'
+import ItemListContainer from './ItemListContainer'
 
 function Products() {
   return (
     <>
       <ItemListContainer />
-      <Footer/>
     </>
   )
 }

@@ -23,7 +23,7 @@ const Cart = () => {
     );
   }
   return (
-    <div className="col-11 m-top m-auto">
+    <div className="gap-3">
       {cart.map((product) => (
         <CartItem key={product.id} {...product} />
       ))}

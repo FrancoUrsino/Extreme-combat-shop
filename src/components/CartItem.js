@@ -40,44 +40,33 @@ const CartItem = ({ product, quantity }) => {
   };
 
   return (
-      <div className="flex px-5 align-items-center">
-        <div className="col-3">
-          <img src={product.image}  alt={product.title}/>
+    <div className="w-5/12 mx-auto">
+      <div className="grid grid-cols-3 px-5 justify-center border-slate-200 border-2 rounded-xl">
+        <div className="">
+          <img src={product.image} alt={product.name} style={{width:'200px'}} />
         </div>
-        <div className="col-md-8">
-          <div className="card-body col-8">
-            <p className="card-text">
-              <small className="text-body-secondary"> ${product.price} x {quantity}</small>
-            </p>
-            <span
-              className={`text-danger p-3 position-absolute bottom-0 end-0`}
-              onClick={handleClickDelete}
-            >
+        <div className=" flex flex-col text-center justify-center">
+          <p className=''>{product.name}</p>
+          <p className=""> x {quantity} ${product.price}</p>
+        </div>
+          <div className="flex flex-col">
+            <span className={`p-3 relative bottom-0 right-0`}  onClick={handleClickDelete}>
               {confirmDelete ? (
-                <div className="d-flex flex-column">
-                  <div className="deleteCounter mb-2">
-                    <button className="btn" onClick={decrementDeleteQuantity}>
-                      -
-                    </button>
-                    <span className="fw-bold">{deleteQuantity}</span>
-                    <button className="btn" onClick={incrementDeleteQuantity}>
-                      +
-                    </button>
+                <div className="flex flex-col">
+                  <div className="deleteCounter m-2">
+                    <button className="btn" onClick={decrementDeleteQuantity}> - </button>
+                    <span className="">{deleteQuantity}</span>
+                    <button className="" onClick={incrementDeleteQuantity}> + </button>
                   </div>
-                  <span
-                    className="confirm-delete cursor-pointer btn-link"
-                    onClick={handleConfirmDelete}
-                  >
-                    Confirm
-                  </span>
+                  <span className="confirm-delete cursor-pointer" onClick={handleConfirmDelete}> Confirm </span>
                 </div>
               ) : (
-                <i className="bi bi-trash-fill cursor-pointer"></i>
+                <span class="material-symbols-outlined">delete</span>
               )}
             </span>
           </div>
-        </div>
       </div>
+    </div>
   );
 };
 

@@ -2,9 +2,10 @@ import NavBar from './components/NavBar/NavBar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Products from './pages/Products';
-import ItemDetailContainer from './components/ItemDetailContainer.js';
-import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './pages/ItemDetailContainer';
+import ItemListContainer from './pages/ItemListContainer';
 import Cart from './components/Cart';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/products/:category' element={<ItemListContainer />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
+        <Footer/>
     </>
 
   );
