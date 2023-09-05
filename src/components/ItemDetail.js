@@ -23,14 +23,12 @@ function ItemDetail({ id, image, name, desc, price, category, stock }) {
           <p className="cardItem__container--container--category">categorías: {category}</p>
           <p className="cardItem__container--container--description">{desc}</p>
           <p className="cardItem__container--container--price">${price}</p>
-          {
-            quanAdd > 0 ? (
-              <Link to='/cart'>Finalizar compra</Link>
-            ) : (
-              <ItemCount initial={1} stock={stock} onAdd={onAdd} />
-            )
-          }
-          <Link to='/products' className='cardItem__container--container--btn bg-gray-800 text-white'>regresar <i className="material-symbols-outlined">reply</i></Link>
+          {quanAdd > 0 ? (
+            <Link to='/cart' className='my-2'>IR AL CARRITO</Link>
+          ) : (
+            <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+          )}
+          <Link to='/products' className='cardItem__container--container--btn'>regresar <i className="material-symbols-outlined">reply</i></Link>
         </div>
       </div>
     </article>
