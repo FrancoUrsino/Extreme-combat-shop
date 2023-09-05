@@ -12,7 +12,7 @@ const CartItem = ({ product, quantity }) => {
         </div>
         <div className=" flex flex-col text-center justify-center">
           <p className=''>{product.name}</p>
-          <p className=""> subtotal: ${quantity * product.price}</p>
+          <p className=""> subtotal: ${Number(quantity) * Number(product.price)}</p>
         </div>
             <button className=''  onClick={()=> removeProd(product.id)}>X</button>
       </div>
