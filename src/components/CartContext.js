@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
         }
       }))
     }else{
-      setCart(...cart, [{...product, quantity}])
+      setCart([...cart, {...product, quantity}])
     }
   }
   const prodInCart = (id)=>{
