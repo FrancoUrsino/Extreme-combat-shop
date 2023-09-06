@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import ItemList from '../components/ItemList'
-import '../components/Item.scss'
+import '../index.scss'
 import { Link, NavLink, useParams } from 'react-router-dom'
 import { db } from '../DB/Firebase.js'
 import productsHero from '../components/images/productsHero.jpg'
@@ -33,7 +33,7 @@ const ItemListContainer = () => {
                     }))
                 )
             )
-            .catch((error) => console.error(error)) // Aplicar .catch() aquí
+            .catch((error) => console.error(error))
             .finally(() => setIsLoading(false));
     } else {
         getDocs(prodCollection)
@@ -45,7 +45,7 @@ const ItemListContainer = () => {
                     }))
                 )
             )
-            .catch((err) => console.error(err)) // Aplicar .catch() aquí
+            .catch((err) => console.error(err))
             .finally(() => setIsLoading(false));
     }
 }, [category]);
