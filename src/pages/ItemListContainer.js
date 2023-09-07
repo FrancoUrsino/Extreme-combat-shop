@@ -20,40 +20,40 @@ const ItemListContainer = () => {
     const prodCollection = collection(db, "products");
 
     if (category) {
-        const queryFilter = query(
-            prodCollection,
-            where("category", "==", category)
-        );
-        getDocs(queryFilter)
-            .then((res) =>
-                setProduct(
-                    res.docs.map((prod) => ({
-                        id: prod.id,
-                        ...prod.data(),
-                    }))
-                )
-            )
-            .catch((error) => console.error(error))
-            .finally(() => setIsLoading(false));
+      const queryFilter = query(
+        prodCollection,
+        where("category", "==", category)
+      );
+      getDocs(queryFilter)
+        .then((res) =>
+          setProduct(
+            res.docs.map((prod) => ({
+              id: prod.id,
+              ...prod.data(),
+            }))
+          )
+        )
+        .catch((error) => console.error(error))
+        .finally(() => setIsLoading(false));
     } else {
-        getDocs(prodCollection)
-            .then((res) =>
-                setProduct(
-                    res.docs.map((prod) => ({
-                        id: prod.id,
-                        ...prod.data(),
-                    }))
-                )
-            )
-            .catch((err) => console.error(err))
-            .finally(() => setIsLoading(false));
+      getDocs(prodCollection)
+        .then((res) =>
+          setProduct(
+            res.docs.map((prod) => ({
+              id: prod.id,
+              ...prod.data(),
+            }))
+          )
+        )
+        .catch((err) => console.error(err))
+        .finally(() => setIsLoading(false));
     }
-}, [category]);
+  }, [category]);
 
   return (
     <>
-    {isLoading ? (<Loader/>): (
-    <div>
+      {isLoading ? (<Loader />) : (
+        <div>
           <img src={productsHero} alt="hero" className='items__img' />
           <ul className='flex text-center justify-center my-2 p-5 uppercase'>
             <li><Link to="/products" className='px-5 mx-5 items__categories'>todos</Link></li>
@@ -67,7 +67,7 @@ const ItemListContainer = () => {
             <ItemList product={product} />
           </section>
         </div>)}
-  </>
+    </>
   )
 }
 

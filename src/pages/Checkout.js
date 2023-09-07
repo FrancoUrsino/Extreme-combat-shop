@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { OrderConfirm } from './OrderConfirm'
-import FormDetails from './FormDetails'
-import { CartContext } from './CartContext';
+import { OrderConfirm } from '../components/OrderConfirm'
+import FormDetails from '../components/FormDetails'
+import { CartContext } from '../components/CartContext';
 
 
 export const Checkout = () => {

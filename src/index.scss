@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 $orbi: 'Orbitron', sans-serif;
 $nanu: 'Nanum Myeongjo', serif;
-
+$julius: 'Julius Sans One', sans-serif;
 
 // ============ //
 // HERO SECTION //
@@ -274,7 +274,7 @@ $nanu: 'Nanum Myeongjo', serif;
 .items__img {
   position: relative;
   top: -70px;
-  height: 70vh;
+  height: 67vh;
   width: 100%;
   object-fit: cover;
   background-position: center;
@@ -298,7 +298,7 @@ $nanu: 'Nanum Myeongjo', serif;
   width: 300px;
   height: 450px;
   display: flex;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: $julius;
 
   &__container {
     width: 100%;
@@ -327,25 +327,27 @@ $nanu: 'Nanum Myeongjo', serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: left;
 
       &--title {
         text-transform: uppercase;
         font-weight: 800;
         padding-top: 5px;
+        text-align: left;
       }
 
       &--btn {
         width: 100%;
+        position: relative;
+        left: 230px;
+        bottom: 54px;
         font-weight: 400;
-        margin: 8px auto;
         text-transform: uppercase;
         transition: .5s ease-in-out;
-
+        font-size: 15px;
+        padding: 0;
         &:hover {
-          background-color: rgba(191, 191, 191, 0.705);
-          color: rgb(255, 255, 255);
-          letter-spacing: 10px;
+          color: rgb(145, 145, 145);
+          
         }
       }
     }
@@ -359,6 +361,7 @@ $nanu: 'Nanum Myeongjo', serif;
 
 .cardItem {
   width: 100%;
+  height: 66.7vh;
   padding: 0;
   margin: 0;
 
@@ -432,18 +435,19 @@ $nanu: 'Nanum Myeongjo', serif;
 // LOADER SECTION //
 // ============== //
 
-.loader__container{
+.loader__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
 
-  &--text{
+  &--text {
     text-transform: uppercase;
     font-size: 30px;
   }
 }
+
 .loader {
   width: 200px;
   height: 200px;
@@ -459,6 +463,17 @@ $nanu: 'Nanum Myeongjo', serif;
 }
 
 
-.cartRealizeBtn{
+.cartRealizeBtn {
   padding: 9px;
+}
+
+.cart__clear--text{
+  font-size: 30px;
+  font-family: $julius;
+}
+.cart__clear--btn{
+  padding: 5px 10px;
+  background-color: rgb(27, 27, 27);
+  border-radius: 10px;
+  color: white;
 }

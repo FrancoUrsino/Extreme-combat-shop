@@ -1,43 +1,43 @@
 import { createContext, useState } from "react";
 
-export const CartContext = createContext({ cart: []})
+export const CartContext = createContext({ cart: [] })
 
 export const CartProvider = ({ children }) => {
 
   const [cart, setCart] = useState([])
-  console.log(cart)
+
 
   const addProd = (product, quantity) => {
-    if(prodInCart(product.id)){
-      setCart(cart.map((prod)=>{
-        if(prod.id === product.id){
-          return{...product, quantity: product.quantity + quantity}
-        }else{
+    if (prodInCart(product.id)) {
+      setCart(cart.map((prod) => {
+        if (prod.id === product.id) {
+          return { ...product, quantity: product.quantity + quantity }
+        } else {
           return product
         }
       }))
-    }else{
-      setCart([...cart, {...product, quantity}])
+    } else {
+      setCart([...cart, { ...product, quantity }])
     }
   }
-  const prodInCart = (id)=>{
+  const prodInCart = (id) => {
     return cart.some((prod) => prod.id === id)
   }
 
-  const removeProd = (id)=>{
-    setCart(cart.filter((prod)=> prod.id !==id))
+  const removeProd = (id) => {
+    setCart(cart.filter((prod) => prod.id !== id))
   }
 
-  const cartQuan = ()=>{
-    return cart.reduce((acc, prod)=> acc + prod.quantity, 0)
+  const cartQuan = () => {
+    return cart.reduce((acc, prod) => acc + prod.quantity, 0)
   }
 
   const clearCart = () => {
     setCart([])
   }
 
-  const total = ()=> {
-    return cart.reduce((acc, prod)=> acc + prod.quantity * prod.price, 0)
+  const total = () => {
+    return cart.reduce((acc, prod) => acc + prod.quantity * prod.price, 0)
   }
 
   return (

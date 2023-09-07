@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-function Item({id, name, price, image, category}) {
+function Item({ id, name, price, image, category }) {
   return (
     <article key={id} className='card'>
       <div className='card__container'>

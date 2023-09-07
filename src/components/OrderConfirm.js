@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const OrderConfirm = ({order}) => {
+export const OrderConfirm = ({ order }) => {
   return (
     <>
       <h1 className="text-center my-3">

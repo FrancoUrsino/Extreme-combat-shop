@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { CartContext } from './CartContext'
 
 function CartWidget() {
-  const {cartQuan} = useContext(CartContext)
+  const { cartQuan } = useContext(CartContext)
   return (
     <div className='flex px-4 nav__cart justify-center'>
       <NavLink to="/cart">
