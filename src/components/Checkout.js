@@ -2,10 +2,11 @@ import React, { useContext, useState } from 'react'
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { OrderConfirm } from './OrderConfirm'
 import FormDetails from './FormDetails'
+import { CartContext } from './CartContext';
 
 
 export const Checkout = () => {
-  const { cart, clearCart, total } = useContext()
+  const { cart, clearCart, total } = useContext(CartContext)
   const [order, setOrder] = useState(null)
   const [userDate, setUserDate] = useState({ name: "", email: "", repeatEmail: "", number: "", direction: "" })
 
@@ -27,8 +28,8 @@ export const Checkout = () => {
     buyOrder.prod = cart.map(({ name, id, price, quantity }) => ({ id, name, price, quantity }))
     buyOrder.totalP = total()
 
-    const dbFirestore = getFirestore()
-    const orderCollection = collection(dbFirestore, "orders")
+    const db = getFirestore()
+    const orderCollection = collection(db, "orders")
     addDoc(orderCollection, buyOrder)
       .then((res) => { setOrder(res.id) })
       .catch((err) => console.log(err))
