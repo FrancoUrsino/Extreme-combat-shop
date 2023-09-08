@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom'
 
 export const OrderConfirm = ({ order }) => {
   return (
-    <>
-      <h1 className="text-center my-3">
+    <div className='text-center my-64 flex flex-col space-y-60'>
+      <h1 className="text-center my-3 ">
         El ID de su orden es: {order}
       </h1>
-      <div className="text-center mt-3 mb-3">
-        <Link to="/products">Volver a la tienda</Link>
-      </div>
-    </>
+        <Link to="/products" className=' border-2 p-3 bg-slate-700 mx-64 text-white uppercase rounded-lg'>Volver a la tienda</Link>
+    </div>
   )
 }
