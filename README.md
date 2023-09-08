@@ -38,6 +38,7 @@ https://github.com/FrancoUrsino/ProyectoFinal_Ursino/assets/115008041/3c0fbd05-d
 - Realizar una orden de compra.
 
 **finalizar compra obteniendo un id único para cada orden**
+
 https://github.com/FrancoUrsino/ProyectoFinal_Ursino/assets/115008041/fc7b56de-0850-428c-ade1-b070600ee3f2
 
 
