@@ -1,4 +1,7 @@
 <h1>PROYECTO FINAL PARA EL CURSO DE REACTJS</h1>
+
+![Logo](https://i.postimg.cc/Qdh5pxpv/logo.png)
+
 https://extremecombatshop.vercel.app/
 
 # NAVEGACIÓN DE PÁGINA Extreme Combat Shop
