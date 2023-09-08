@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 import { CartContext } from './CartContext'
+import {Toaster} from 'sonner'
 
 function ItemDetail({ id, image, name, desc, price, category, stock }) {
   const [quanAdd, setQuanAdd] = useState(0)
@@ -14,6 +15,8 @@ function ItemDetail({ id, image, name, desc, price, category, stock }) {
   }
 
   return (
+    <>
+    <Toaster position='top-right'/>
     <article className="cardItem">
       <div className="cardItem__container">
         <img src={image} alt={name} className="cardItem__container--img justify-self-center" />
@@ -31,6 +34,7 @@ function ItemDetail({ id, image, name, desc, price, category, stock }) {
         </div>
       </div>
     </article>
+    </>
   )
 }
 
