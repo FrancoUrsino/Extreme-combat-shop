@@ -1,13 +1,14 @@
 <h1>PROYECTO FINAL PARA EL CURSO DE REACTJS</h1>
 
-# NAVEGACIÓN DE PÁGINA Extreme Combat Shop
-
-https://github.com/FrancoUrsino/PreEntrega2Ursino/assets/115008041/09c9d7d5-7eb5-445c-8177-17e5cd2d0999
-
 https://extremecombatshop.vercel.app/
 
 
-# Esta página fue programada y diseñada con:
+# NAVEGACIÓN DE PÁGINA Extreme Combat Shop
+
+https://github.com/FrancoUrsino/ProyectoFinal_Ursino/assets/115008041/3c0fbd05-d3d2-4042-a14d-4a91cf8456a4
+
+
+# TECNOLOGÍAS UTILIZADAS
 
 ✅ **Para la maquetación:**
 - ReactJs
@@ -16,7 +17,7 @@ https://extremecombatshop.vercel.app/
 ✅ **Para el diseño:**
 - SASS
 - Tailwind
-- sonner
+- Sonner
 
 ✅ **Para la instalación:**
 - NodeJs
@@ -26,7 +27,7 @@ https://extremecombatshop.vercel.app/
 - Firebase
 
 
-# Funcionalidades
+# FUNCIONALIDADES
 
 - Ver una lista de productos disponibles.
 - Filtrar productos por categoría.
@@ -36,13 +37,17 @@ https://extremecombatshop.vercel.app/
 - Eliminar productos del carrito.
 - Realizar una orden de compra.
 
+**finalizar compra obteniendo un id único para cada orden**
 
-# Instalación
+https://github.com/FrancoUrsino/ProyectoFinal_Ursino/assets/115008041/fc7b56de-0850-428c-ade1-b070600ee3f2
+
+
+# INSTALACIÓN
 
 **Para clonar el proyecto y tenerlo en tu pc local:**
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/FrancoUrsino/ProyectoFinal_Ursino
 ```
 
 ir a la carpeta de tu proyecto
@@ -63,7 +68,7 @@ iniciar en localhost
   npm start
 ```
 
-# Soporte
+# SOPORTE
 
 para obtener ayuda, enviar un mail a extremesupport@gmail.com
 
