@@ -45,4 +45,4 @@ export const CartProvider = ({ children }) => {
       {children}
     </CartContext.Provider>
   )
-}
+  }

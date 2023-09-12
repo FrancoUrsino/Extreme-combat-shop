@@ -15,7 +15,7 @@ const Cart = () => {
       <Toaster richColors position='top-right'/>
       {cart.length > 0 ?
         (<div className="gap-3" >{cart.map((product) => <CartItem key={product.id} product={product} />)}
-          <div className="text-center">
+          <div className="text-center my-44">
             <h3 className='font-semibold text-lg mb-8'>Total: ${total()}</h3>
             <button onClick={() => {clearCart(); toast.error('vaciaste tu carrito')}} className="mx-6 uppercase p-2 rounded-xl bg-stone-700 text-white">eliminar todo</button>
             <Link to="/checkout" className="uppercase bg-stone-700 text-white p-2 rounded-xl">realizar pedido</Link>
