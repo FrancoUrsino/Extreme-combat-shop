@@ -6,6 +6,7 @@ import ItemListContainer from './pages/ItemListContainer';
 import Cart from './pages/Cart';
 import Footer from './components/Footer';
 import { Checkout } from './pages/Checkout';
+// import './DB/migration'
 
 
 function App() {
